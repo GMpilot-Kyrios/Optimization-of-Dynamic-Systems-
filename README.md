@@ -14,6 +14,6 @@ $$
 下面我们来确定步长 $\alpha^{(k)}$。我们观察一下公式$(1.1)$公式，就会发现：在最速下降法中目标函数J为：
 $$
 \begin{equation}
-\min_{\alpha^{k}\in R^+}\left{J(\theta^{(k)}+\alpha^{(k)}p_{SD}^{k})\right} = \min_{\alpha^{k}\in R^+}\left{\Phi(\alpha^{k})\right} 
+\min_{\alpha^{k}\in R^+}\left\{J(\theta^{(k)}+\alpha^{(k)}p_{SD}^{k})\right\} = \min_{\alpha^{k}\in R^+}\left\{\Phi(\alpha^{k})\right\} 
 \end{equation}
 $$
