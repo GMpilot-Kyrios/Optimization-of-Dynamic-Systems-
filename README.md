@@ -5,7 +5,7 @@
 $$
 \begin{equation}
 \theta^{(k+1)} = \theta^{(k)} + \alpha^{(k)} p^{(k)} \longmapsto J(\theta^{(k+1)}) = \min_{\alpha^{(k)}\in R^{+}}{J(\theta^{(k)} + \alpha^{(k)}p^{(k)})\}
-\label{equ:MiniAim}
+\tap{1.1}
 \end{equation}
 $$
 其中J为目标方程(object function)因此对于Line Search Method 来说，在每一部迭代中我们有两个任务。第一，确定方向$p^{(k)}$;第二，确定步长$\alpha^{(k)}$。下面我们来看几个line search method。
@@ -16,7 +16,7 @@ $$
 p_{SD}^{(k)} = -\left[\frac{dJ(\theta)}{d\theta}\Bigg|_{\theta_k}\right] 
 \end{equation}
 $$
-下面我们来确定步长 $\alpha^{(k)}$。我们观察一下公式$\ref{equ:MiniAim}$公式，就会发现：在最速下降法中目标函数J为：
+下面我们来确定步长 $\alpha^{(k)}$。我们观察一下公式$(1.1)$公式，就会发现：在最速下降法中目标函数J为：
 $$
 \begin{equation}
 \min_{\alpha^{k}\in R^+}\left{J(\theta^{(k)}+\alpha^{(k)}p_{SD}^{k})\right} = \min_{\alpha^{k}\in R^+}\left{\Phi(\alpha^{k})\right} 
