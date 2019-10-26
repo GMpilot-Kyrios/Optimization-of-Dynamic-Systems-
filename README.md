@@ -11,9 +11,6 @@ $$
 其中J为目标方程(object function)因此对于Line Search Method 来说，在每一部迭代中我们有两个任务。第一，确定方向$p^{(k)}$;第二，确定步长$\alpha^{(k)}$。下面我们来看几个line search method。
 ## Steepest Descent Method(最速下降法)
 对于最速下降法，方向向量我们选择:
-$$
-p^{(k)}_{SD} = -\left[\frac{dJ(\theta)}{d\theta}\Bigg|_{\theta_k}\right] 
-$$
 下面我们来确定步长 $\alpha^{(k)}$。我们观察一下公式$(1.1)$公式，就会发现：在最速下降法中目标函数J为：
 $$
 \begin{equation}
