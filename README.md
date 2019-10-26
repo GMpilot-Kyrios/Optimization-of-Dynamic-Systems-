@@ -12,7 +12,9 @@ $$
 ## Steepest Descent Method(最速下降法)
 对于最速下降法，方向向量我们选择:
 $$
-p_{SD}^{((k)} = -\frac{dJ(\theta)}{d\theta}\Bigg|{\theta_k}
+\begin{equation}
+p_{SD}^{(k)} = -\frac{dJ(\theta)}{d\theta}\Bigg|{\theta_k}
+\end{equation}
 $$
 下面我们来确定步长 $\alpha^{(k)}$。我们观察一下公式$(1.1)$公式，就会发现：在最速下降法中目标函数J为：
 $$
