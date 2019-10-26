@@ -6,4 +6,4 @@ $$\theta^{(k+1)} = \theta^{(k)} + \alpha^{(k)} p^{(k)} \longmapsto J(\theta^{(k+
 因此对于Line Search Method 来说，在每一部迭代中我们有两个任务。第一，确定方向$p^{(k)}$;第二，确定步长$\alpha^{(k)}$。下面我们来看几个line search method。
 ## Steepest Descent Method(最速下降法)
 对于最速下降法，方向向量我们选择:
-$$$p^{(k)}$ = -\left[\frac{dJ(\theta)}{d\theta}\mid_{\theta_k}\right]$$
+$$p^{(k)} = -\left[\frac{dJ(\theta)}{d\theta}\right|_{\theta_k}\right]$$
