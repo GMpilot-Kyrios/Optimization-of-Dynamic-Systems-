@@ -29,9 +29,9 @@ ps: 小编在使用sympy库的solve方法时发现了一个一些问题。程序
 ## Backtracking algorithm
 我们使用回溯法来获得步长$\alpha$，这个方法有一个好处就是不用计算零点。
 ```{r, eval=FALSE,tidy=FALSE}
-Choose $\overline{\alpha} = 1$, $\varsigma\in \[0,1\]$ set $\alpha2^{(k)} = \overline{\alpha}$</br>
-repeat </br>
-  $\alpha^{(k)} = \varsigma * \alpha^{(k)}$</br>
-until $\Phi(\alpha^{(k)}) small enough$</br>
-return $\alpha^{(k)}$
+Choose a_hat = 1, c in [0,1], set a_k = a_hat
+repeat 
+  a_k = c * a_k
+until \Phi(a_k) small enough
+return a_k
 ```
