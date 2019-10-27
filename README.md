@@ -28,8 +28,10 @@ $$
 ps: 小编在使用sympy库的solve方法时发现了一个一些问题。程序的第34、35行计算了目标方程的导数，这里需要用到simplify方法来简化表达式，否则solve方法返回出来的的结果为一个表达式，不容易进行类型转换。除此之外，面对系数复杂的等式，solve一般会返回虚部为零的虚数解，这就会让我们很头疼。同学们不妨亲自验证一下，范例的banana function对于任意带入点的导数都有实数零点。这时候下编自己相想出了一个方法，就是利用.as_real_imag()方法提取虚部，一旦虚部为零就选取实数的部分存在新的列表里，由此得到实数零点(见41至46行)。程序的第56行，我们人为地加入一个判断条件就是，在新选取的迭代点处，方程的值一定要小于原先的迭代点$J(\theta^{(k)})$这样过程才是下降的，另外我们选择步长小于1使得步长不至于过大，同学们可以试试去掉这个条件，这样对于不同的起始点，该算法有可能不收敛。即便有了以上两个条件，我们依然可以从图中观察到，该算法收敛效果并不好。
 ## Backtracking algorithm
 我们使用回溯法来获得步长$\alpha$，这个方法有一个好处就是不用计算零点。
-<br>Choose $\overline{\alpha} = 1$, $\varsigma\in \[0,1\]$ set $\alpha2^{(k)} = \overline{\alpha}$</br>
-<br>  repeat </br>
-<br>    $\alpha^{(k)} = \varsigma * \alpha^{(k)}$</br>
-<br>  until $\Phi(\alpha^{(k)}) small enough$</br>
-<br>  return $\alpha^{(k)}$
+```{r, eval=FALSE,tidy=FALSE}
+Choose $\overline{\alpha} = 1$, $\varsigma\in \[0,1\]$ set $\alpha2^{(k)} = \overline{\alpha}$</br>
+repeat </br>
+  $\alpha^{(k)} = \varsigma * \alpha^{(k)}$</br>
+until $\Phi(\alpha^{(k)}) small enough$</br>
+return $\alpha^{(k)}$
+```
