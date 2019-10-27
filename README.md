@@ -22,5 +22,5 @@ $$
 \min_{\alpha^{k}\in R^+}\lbrace J(\theta^{(k)}+\alpha^{(k)}p_{SD}^{k})\rbrace = \min_{\alpha^{k}\in R^+}\lbrace\Phi(\alpha^{k})\rbrace 
 \end{equation}
 $$
-现在$\theta^{(k)}$和$p_{SD}^{(k)}$已知，我们记新的目标方程J的最小值为$\Phi(\alpha^k)$，也就是说新的目标方程是关于步长$\alpha$的一次线性方程。一个直观的方法是用导数等于零的方法直接计算$\Phi(\alpha^k)$的最小值。[SteepestDescentMethod.py](https://github.com/FahrerFeng/Optimization-of-Dynamic-Systems-/blob/master/SteepestDescentMethod.py)文件描述了这一想法。
+现在$\theta^{(k)}$和$p_{SD}^{(k)}$已知，我们记新的目标方程J的最小值为$\Phi(\alpha^k)$，也就是说新的目标方程是关于步长$\alpha$的一次线性方程。一个直观的方法是用导数等于零的方法直接计算$\Phi(\alpha^k)$的最小值。[SteepestDescentMethod.py](https://github.com/FahrerFeng/Optimization-of-Dynamic-Systems-/blob/master/SteepestDescentMethod.py)文件描述了这一想法。我们选用banana function $100(\theta_2-\theta_1^2)^2+(1-\theta_1)^2$作为例子，该方程在(1,1)点处去得最小值。
 ![](https://github.com/FahrerFeng/Optimization-of-Dynamic-Systems-/blob/master/SDForiginal.png)
